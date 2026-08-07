@@ -33,7 +33,9 @@ const app = () => {
 
   const onEachKecamatan = (feature, layer) => {
     const kecamatan = feature.properties.WADMKC;
-    layer.bindPopup(`<strong>Kecamatan:</strong> ${kecamatan}`);
+    const luasWilayah = feature.properties.LuasKm2;
+    layer.bindPopup(`<strong>Kecamatan:</strong> ${kecamatan}<br/>
+      <strong>Luas Wilayah:</strong> ${luasWilayah.toLocaleString("id-ID")} km²`);
     layer.on({
       mouseover: (e) => {
         e.target.setStyle({
