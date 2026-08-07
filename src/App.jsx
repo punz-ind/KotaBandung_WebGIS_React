@@ -1,11 +1,80 @@
-import { LayersControl, MapContainer, TileLayer } from "react-leaflet";
+import { LayersControl, MapContainer, TileLayer, GeoJSON } from "react-leaflet";
+import dataKotaBandung from "./assets/data/Adm_Kota_Bandung.json";
+
+const acuanDensitas = (densitas) => {
+  return densitas <= 11908
+    ? "#4ade80"
+    : densitas > 11908 && densitas <= 18830
+      ? "#facc15"
+      : densitas > 18830 && densitas <= 25751
+        ? "#f97316"
+        : densitas > 25751
+          ? "#dc2626"
+          : "#000";
+};
 
 const app = () => {
+  const styleKecamatan = {
+    fillColor: "#2196F3",
+    weight: 1,
+    color: "white",
+    fillOpacity: 0.5,
+  };
+
+  const styleDensitas = (feature) => {
+    const densitas = feature.properties.Densitas;
+    return {
+      fillColor: acuanDensitas(densitas),
+      weight: 1,
+      color: "white",
+      fillOpacity: 0.5,
+    };
+  };
+
+  const onEachKecamatan = (feature, layer) => {
+    const kecamatan = feature.properties.WADMKC;
+    layer.bindPopup(`<strong>Kecamatan:</strong> ${kecamatan}`);
+    layer.on({
+      mouseover: (e) => {
+        e.target.setStyle({
+          weight: 3,
+          fillColor: "#0D47A1",
+          fillOpacity: 0.7,
+        });
+      },
+      mouseout: (e) => {
+        e.target.setStyle(styleKecamatan);
+      },
+    });
+  };
+
+  const onEachDensitas = (feature, layer) => {
+    const kecamatan = feature.properties.WADMKC;
+    const densitas = feature.properties.Densitas;
+    const keterangan = feature.properties.Keterangan;
+    layer.bindPopup(
+      `<strong>Kecamatan:</strong> ${kecamatan}<br/>
+      <strong>Densitas:</strong> ${densitas.toLocaleString("id-ID")} jiwa/km²<br/>
+      <strong>Keterangan:</strong> ${keterangan}`,
+    );
+    layer.on({
+      mouseover: (e) => {
+        e.target.setStyle({
+          weight: 3,
+          fillOpacity: 0.7,
+        });
+      },
+      mouseout: (e) => {
+        e.target.setStyle(styleDensitas(feature));
+      },
+    });
+  };
+
   return (
     <div>
       <div>
         <MapContainer
-          center={[-6.916050781414965, 107.6281649298608]}
+          center={[-6.91144503802856, 107.63519839096463]}
           zoom={13}
           // scrollWheelZoom={false}
           className="w-full h-[990px]"
@@ -24,6 +93,23 @@ const app = () => {
                 subdomains={["mt0", "mt1", "mt2", "mt3"]}
               />
             </LayersControl.BaseLayer>
+            <LayersControl.Overlay
+              name="Wilayah Administrasi Kota Bandung"
+              checked
+            >
+              <GeoJSON
+                data={dataKotaBandung}
+                onEachFeature={onEachKecamatan}
+                style={styleKecamatan}
+              />
+            </LayersControl.Overlay>
+            <LayersControl.Overlay name="Densitas Penduduk">
+              <GeoJSON
+                data={dataKotaBandung}
+                onEachFeature={onEachDensitas}
+                style={styleDensitas}
+              />
+            </LayersControl.Overlay>
           </LayersControl>
         </MapContainer>
       </div>
