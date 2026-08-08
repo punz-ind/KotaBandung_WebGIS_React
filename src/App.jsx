@@ -3,7 +3,7 @@ import MapComponent from "./components/ui/MapComponent";
 const app = () => {
   return (
     <div className="p-4">
-      <MapComponent />;
+      <MapComponent />
     </div>
   );
 };

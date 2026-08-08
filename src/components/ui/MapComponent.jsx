@@ -78,8 +78,8 @@ const MapComponent = () => {
         <MapContainer
           center={[-6.9047876606406975, 107.63103959941472]}
           zoom={13}
-          // scrollWheelZoom={false}
-          className="w-full h-[790px] border border-gray-500 rounded-lg"
+          scrollWheelZoom={false}
+          className="w-full h-[960px] border border-gray-500 rounded-lg"
         >
           <LayersControl position="topright">
             <LayersControl.BaseLayer checked name="OpenStreetMap">
