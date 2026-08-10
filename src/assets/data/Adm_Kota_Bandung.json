@@ -14,7 +14,7 @@
         "LuasKm2": 5.44,
         "Populasi": 62980,
         "Densitas": 11577,
-        "Keterangan": "Rendah"
+        "Keterangan": "Sedang"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -1829,7 +1829,7 @@
         "LuasKm2": 5.58,
         "Populasi": 131860,
         "Densitas": 23631,
-        "Keterangan": "Padat"
+        "Keterangan": "Sangat Padat"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -5372,7 +5372,7 @@
         "LuasKm2": 4.93,
         "Populasi": 85335,
         "Densitas": 17309,
-        "Keterangan": "Sedang"
+        "Keterangan": "Padat"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -5912,7 +5912,7 @@
         "LuasKm2": 4.01,
         "Populasi": 99897,
         "Densitas": 24912,
-        "Keterangan": "Padat"
+        "Keterangan": "Sangat Padat"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -8696,7 +8696,7 @@
         "LuasKm2": 10.57,
         "Populasi": 107518,
         "Densitas": 10172,
-        "Keterangan": "Rendah"
+        "Keterangan": "Sedang"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -9358,7 +9358,7 @@
         "LuasKm2": 5.96,
         "Populasi": 98886,
         "Densitas": 16592,
-        "Keterangan": "Sedang"
+        "Keterangan": "Padat"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -10684,7 +10684,7 @@
         "LuasKm2": 3.44,
         "Populasi": 35086,
         "Densitas": 10199,
-        "Keterangan": "Rendah"
+        "Keterangan": "Sedang"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -12429,7 +12429,7 @@
         "LuasKm2": 4.44,
         "Populasi": 69861,
         "Densitas": 15734,
-        "Keterangan": "Sedang"
+        "Keterangan": "Padat"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -14399,7 +14399,7 @@
         "LuasKm2": 4.74,
         "Populasi": 118711,
         "Densitas": 25045,
-        "Keterangan": "Padat"
+        "Keterangan": "Sangat Padat"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -16904,7 +16904,7 @@
         "LuasKm2": 7.25,
         "Populasi": 113267,
         "Densitas": 15623,
-        "Keterangan": "Sedang"
+        "Keterangan": "Padat"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -17855,7 +17855,7 @@
         "LuasKm2": 5.82,
         "Populasi": 68624,
         "Densitas": 11791,
-        "Keterangan": "Rendah"
+        "Keterangan": "Sedang"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -18369,7 +18369,7 @@
         "LuasKm2": 4.73,
         "Populasi": 79339,
         "Densitas": 16774,
-        "Keterangan": "Sedang"
+        "Keterangan": "Padat"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -19127,7 +19127,7 @@
         "LuasKm2": 4.92,
         "Populasi": 92203,
         "Densitas": 18740,
-        "Keterangan": "Sedang"
+        "Keterangan": "Padat"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -20211,7 +20211,7 @@
         "LuasKm2": 4.61,
         "Populasi": 81995,
         "Densitas": 17786,
-        "Keterangan": "Sedang"
+        "Keterangan": "Padat"
       },
       "geometry": {
         "type": "MultiPolygon",
